@@ -2,41 +2,6 @@
 
 Application e-commerce complète avec un frontend Vue.js et un backend Spring Boot, comprenant l'authentification sécurisée, la gestion des produits et le traitement des commandes.
 
-## Structure du Projet
-
-backend/                         # Backend (Spring Boot)
-├── src/
-│   ├── main/
-│   │   ├── java/com/example/backend/
-│   │   │   ├── BackendApplication.java
-│   │   │   ├── controller/
-│   │   │   ├── model/
-│   │   │   ├── repository/
-│   │   │   ├── security/
-│   │   │   │   ├── SecurityConfig.java
-│   │   │   │   └── SecurityFilter.java
-│   │   │   └── services/
-│   │   └── resources/
-│   │       └── application.properties
-│   └── pom.xml
-
-client/                          # Frontend (Vue.js + Tailwind CSS)
-├── src/
-│   ├── api/
-│   │   ├── client.js           # Configuration Axios
-│   │   └── services.js         # Services API
-│   ├── pages/
-│   │   ├── HomePage.vue
-│   │   ├── LoginPage.vue
-│   │   └── RegisterPage.vue
-│   ├── router/
-│   │   └── index.js
-│   ├── App.vue
-│   └── main.js
-├── package.json
-├── vite.config.js
-└── tailwind.config.js
-
 ## Démarrage du Backend
 
 # Ouvrir le projet dans IntelliJ IDEA
@@ -87,19 +52,6 @@ Le frontend sera disponible sur http://localhost:5173 (ou 5174/5175 si occupé)
 - Dashboard Admin - Gestion complète des produits
 - Gestion Utilisateurs - Administration des utilisateurs
 - Gestion Commandes - Traitement des commandes
-
-## Structure des Routes
-
-/ (Accueil)
-├── /login (Public)
-├── /register (Public)
-├── /product/:id (Public)
-├── /user (Protégé)
-│   └── /user/orders
-└── /admin (Admin uniquement)
-    ├── /admin/products
-    ├── /admin/users
-    └── /admin/orders
 
 ## Endpoints API
 
