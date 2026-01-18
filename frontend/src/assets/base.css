@@ -1,0 +1,85 @@
+/* Palette de couleurs personnalisée */
+:root {
+  --main-white: #ffffff;
+  --white-soft: #f7f7f7;
+  --white-muted: #f1f1f1;
+
+  --main-black: #1a1a1a;
+  --black-soft: #232323;
+  --black-muted: #2a2a2a;
+
+  --primary-indigo: #2e3f52;
+
+  --divider-light-1: rgba(62, 62, 62, 0.3);
+  --divider-light-2: rgba(62, 62, 62, 0.13);
+  --divider-dark-1: rgba(85, 85, 85, 0.66);
+  --divider-dark-2: rgba(85, 85, 85, 0.48);
+
+  --text-light-primary: var(--primary-indigo);
+  --text-light-secondary: rgba(62, 62, 62, 0.65);
+  --text-dark-primary: var(--main-white);
+  --text-dark-secondary: rgba(230, 230, 230, 0.63);
+}
+
+/* Couleurs sémantiques du projet */
+:root {
+  --bg-main: var(--main-white);
+  --bg-soft: var(--white-soft);
+  --bg-muted: var(--white-muted);
+
+  --border-color: var(--divider-light-2);
+  --border-hover: var(--divider-light-1);
+
+  --heading-color: var(--text-light-primary);
+  --text-color: var(--text-light-primary);
+
+  --section-spacing: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-main: var(--main-black);
+    --bg-soft: var(--black-soft);
+    --bg-muted: var(--black-muted);
+
+    --border-color: var(--divider-dark-2);
+    --border-hover: var(--divider-dark-1);
+
+    --heading-color: var(--text-dark-primary);
+    --text-color: var(--text-dark-secondary);
+  }
+}
+
+/* Reset global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Styles globaux du body */
+body {
+  min-height: 100vh;
+  color: var(--text-color);
+  background-color: var(--bg-main);
+  transition: color 0.4s, background-color 0.4s;
+  line-height: 1.6;
+  font-family:
+    "Inter", 
+    system-ui, 
+    -apple-system, 
+    'Segoe UI', 
+    Roboto, 
+    Ubuntu, 
+    Cantarell, 
+    'Fira Sans', 
+    'Droid Sans', 
+    'Helvetica Neue', 
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

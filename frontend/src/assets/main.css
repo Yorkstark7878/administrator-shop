@@ -1,0 +1,34 @@
+/* Import du fichier de base et directives Tailwind */
+@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Conteneur principal */
+#root-app {
+  font-weight: normal;
+}
+
+/* Liens et éléments verts */
+.link,
+.btn-green {
+  text-decoration: none;
+  color: hsl(165, 90%, 38%);
+  transition: all 0.4s ease;
+  padding: 3px;
+}
+
+/* Effet hover pour les écrans supportant le survol */
+@media (hover: hover) {
+  .link:hover,
+  .btn-green:hover {
+    background-color: hsla(165, 90%, 38%, 0.18);
+  }
+}
+
+/* Media query pour grands écrans (desktop) */
+@media (min-width: 1024px) {
+  body {
+    /* Tu peux ajouter des styles spécifiques desktop ici */
+  }
+}
